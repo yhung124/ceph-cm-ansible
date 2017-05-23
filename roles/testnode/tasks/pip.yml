@@ -7,11 +7,11 @@
     enablerepo: epel
   when: ansible_pkg_mgr == "yum" and ansible_distribution != 'Fedora'
 
-- name: Install python-pip on apt based systems.
-  apt:
-    name: python-pip
-    state: present
-  when: ansible_pkg_mgr == "apt"
+#- name: Install python-pip on apt based systems.
+#  apt:
+#    name: python-pip
+#    state: present
+#  when: ansible_pkg_mgr == "apt"
 
 - name: Create the .pip directory for the teuthology user.
   file:
