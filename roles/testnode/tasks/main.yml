@@ -43,9 +43,9 @@
   include: yum_systems.yml
   when: ansible_pkg_mgr == "yum"
 
-- name: configure things specific to apt systems
-  include: apt_systems.yml
-  when: ansible_pkg_mgr == "apt"
+#- name: configure things specific to apt systems
+#  include: apt_systems.yml
+#  when: ansible_pkg_mgr == "apt"
 
 - name: configure things specific to zypper systems
   include: zypper_systems.yml
