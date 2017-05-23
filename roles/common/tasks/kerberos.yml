@@ -12,16 +12,16 @@
   command: apt-get clean
   when: ansible_os_family == 'Debian'
 
-- name: Update apt cache
-  apt:
-    update_cache: yes
+#- name: Update apt cache
+#  apt:
+#    update_cache: yes
   # Register and retry to work around transient http issues
-  register: apt_cache_update
-  until: apt_cache_update|success
+# register: apt_cache_update
+#  until: apt_cache_update|success
   # try for 2 minutes before failing
-  retries: 24
-  delay: 5
-  when: ansible_os_family == 'Debian'
+#  retries: 24
+#  delay: 5
+#  when: ansible_os_family == 'Debian'
 
 - name: Install Kerberos Packages (Debian)
   apt:
