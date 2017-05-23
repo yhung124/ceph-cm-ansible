@@ -37,21 +37,21 @@
 #    - nagios
 
 # configure nagios
-- include: nagios.yml
-  when: ansible_pkg_mgr != "zypper"
-  tags:
-    - nagios
+#- include: nagios.yml
+#  when: ansible_pkg_mgr != "zypper"
+#  tags:
+#    - nagios
 
-- name: Get SELinux status
-  command: getenforce
-  register: selinux_status
-  when: ansible_pkg_mgr == "yum"
-  tags:
-    - nagios
+#- name: Get SELinux status
+#  command: getenforce
+#  register: selinux_status
+#  when: ansible_pkg_mgr == "yum"
+#  tags:
+#    - nagios
 
 # configure selinux for nagios
-- include: nrpe-selinux.yml
-  when: ansible_os_family == "RedHat" and
-        (selinux_status is defined and selinux_status.stdout != "Disabled")
-  tags:
-    - nagios
+#- include: nrpe-selinux.yml
+#  when: ansible_os_family == "RedHat" and
+#        (selinux_status is defined and selinux_status.stdout != "Disabled")
+#  tags:
+#    - nagios
