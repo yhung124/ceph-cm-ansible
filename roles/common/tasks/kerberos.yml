@@ -23,11 +23,11 @@
 #  delay: 5
 #  when: ansible_os_family == 'Debian'
 
-- name: Install Kerberos Packages (Debian)
-  apt:
-    name: krb5-user
-    state: present
-  when: ansible_os_family == 'Debian'
+#- name: Install Kerberos Packages (Debian)
+#  apt:
+#    name: krb5-user
+#    state: present
+#  when: ansible_os_family == 'Debian'
 
 - name: Install Kerberos Packages (OpenSUSE Leap)
   zypper:
