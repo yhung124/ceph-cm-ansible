@@ -7,13 +7,13 @@
   tags:
     - packages
 
-- name: Install ntp package on apt based systems.
-  apt:
-    name: ntp
-    state: present
-  when: ansible_pkg_mgr  == "apt"
-  tags:
-    - packages
+#- name: Install ntp package on apt based systems.
+#  apt:
+#    name: ntp
+#    state: present
+#  when: ansible_pkg_mgr  == "apt"
+#  tags:
+#    - packages
 
 # See https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=806556.
 # ifdown/ifup would often leave ntpd not running on xenial.
