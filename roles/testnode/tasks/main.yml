@@ -78,9 +78,9 @@
   when: ansible_distribution == "Debian"
 
 # Install and configure cpan and Amazon::S3
-- include: cpan.yml
-  tags:
-    - cpan
+#- include: cpan.yml
+#  tags:
+#    - cpan
 
 # configure ntp
 - include: ntp.yml
