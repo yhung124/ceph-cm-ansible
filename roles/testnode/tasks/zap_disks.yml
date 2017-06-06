@@ -1,8 +1,8 @@
 ---
-- name: Make sure gdisk is installed
-  package:
-    name: gdisk
-    state: present
+#- name: Make sure gdisk is installed
+#  package:
+#    name: gdisk
+#    state: present
 
 - name: Set root disk
   set_fact:
