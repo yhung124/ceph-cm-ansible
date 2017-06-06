@@ -8,7 +8,7 @@
   set_fact:
     root_disk: "{{ item.device|regex_replace('[0-9]+', '') }}"
   with_items: "{{ ansible_mounts }}"
-  when: item.mount == '/'
+  when: item.mount == '/etc/hosts'
 
 - name: Zap all non-root disks
   command: sgdisk --zap-all "/dev/{{ item.key }}"
