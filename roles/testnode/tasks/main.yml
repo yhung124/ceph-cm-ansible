@@ -24,9 +24,9 @@
   tags:
     - hostname
 
-#- include: zap_disks.yml
-#  tags:
-#    - zap
+- include: zap_disks.yml
+  tags:
+    - zap
 
 - name: partition drives, if any are requested
   include: drive_partitioning.yml
