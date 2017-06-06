@@ -13,4 +13,4 @@
 - name: Zap all non-root disks
   command: sgdisk --zap-all "/dev/{{ item.key }}"
   with_dict: "{{ ansible_devices }}"
-  when: item.key not in root_disk
+  when: item.key not in root_disk and ansible_devices[item]['model'] != "USB DISK MODULE"
