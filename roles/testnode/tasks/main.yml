@@ -34,10 +34,10 @@
   tags:
     - partition
 
-- name: configure ssh
-  include: ssh.yml
-  tags:
-    - ssh
+#- name: configure ssh
+#  include: ssh.yml
+#  tags:
+#    - ssh
 
 - name: configure things specific to yum systems
   include: yum_systems.yml
@@ -83,9 +83,9 @@
 #    - cpan
 
 # configure ntp
-- include: ntp.yml
-  tags:
-    - ntp-client
+#- include: ntp.yml
+#  tags:
+#    - ntp-client
 
 - name: configure pip to use our mirror
   include: pip.yml
